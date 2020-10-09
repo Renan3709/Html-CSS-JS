@@ -1,0 +1,173 @@
+/*Questão 2*/
+body {background-color:#FFFFFF; 
+      color:#BB0D0D;
+      font-size:16px;
+      font-family:Open Sans,sans-serif;}
+
+nav{display:block;
+    border-bottom:2px solid;
+    padding:4px;
+    margin:2px 25% 2px 25%;
+    text-align:center;
+    font-size:18px;
+    font-family:Muli,sans-serif;}
+
+header{display:block;
+       padding:0px;
+       border-bottom:0px;
+       margin-bottom:0px;
+       text-align:center}
+
+a:link{color:#FF0000; text-decoration:none;}
+a:visited{color:#EE0000; text-decoration:none;}
+
+Section{display:block;}
+
+footer{clear:both;
+       margin: 0 25% 0 25%;}
+
+.ender{text-align:center;
+       font-size:14px;
+       border-top:2px solid;
+       padding-top:10px;}
+
+img.imglogo{margin-bottom:4px;
+            padding-bottom:4px;}
+
+.apres{text-align:center;
+       font-size:18px;}
+
+
+
+.botão{display:inline-block;
+       margin-top:0px;
+       margin-bottom:0px;
+       margin-left:4px;
+       margin-right:4px;
+       padding-top:0px;
+       padding-bottom:0px;	
+       padding-left:4px;
+       padding-right:4px;
+/*PADDING em 100px estava ditanciando mto a linha inferior da tabela do menu*/
+       padding:10px;
+/*--------------------------------------------------------------------------*/		
+}
+/*a class MENU estava anulando a MARGIN da borda colocada em NAV*/
+***menu{margin: 1px auto;}
+/*--------------------------------------------------------------------------*/
+
+/*Questão 3*/
+.centralizando{text-align: left;
+               margin-left:31%;
+               margin-right:31%;}
+
+.centralizando2{text-align: center;
+               margin-left:5%;
+               margin-right:20%;}
+
+
+.listDestaq{list-style-type:katakana;
+            color:#2255AA;}
+
+.cordeletra{color:#BB0D0D}
+
+.itemDesProd{list-style-type:square}
+
+.precoVelho{text-decoration-line:line-through;}
+
+.preco{font-weight:bold;
+       color:#FF0000;}	
+
+.imgDestaq{float:right}
+
+/*Questão 4*/
+.tabInfo{border-collapse:collapse;
+         background-color:#FFFFCC;
+         color:#2255AA;
+         margin-top:6px;
+         font-family:arial,unbuntu;
+}
+
+td{border:2px solid;
+   border-color:#000000;
+   padding:6px 12px 6px 12px; 
+}
+
+th{border:2px solid;
+   border-color:#000000;
+   padding:6px 12px 6px 12px;}	
+
+.linTH{color:#FFFFFF;
+       background-color:#0077BB;
+       vertical-align:middle;
+       text-align:center;}	
+
+.colTH{color:#005599;
+       background-color:#FFCC77;
+       text-align:left;}
+
+.preco2{font-weight:bold;
+        color:#CC0000;
+        vertical-align:middle;}
+
+ .estilo{width: 180px; 
+ height: 180px; 
+ border: solid 3px #226699; 
+ padding: 12px; 
+ background-color:white;}
+	
+	
+/*Questão 5*/
+
+fieldset{color:#2255AA;
+         background-color:#FFFFCC;
+         margin: 20px 10px 0px 10px;}
+
+input{border-radius:10%;}
+
+.fsDados{width:510px}
+
+.divLinha{width:490px;
+         margin-bottom:18px;}
+
+
+.colPri{float:left;
+        display:block;}
+
+.inpGrande{width:390px;}
+
+.impMedio{width:120px;}
+
+.impTelef{width:90px;}
+
+.numDD{width:40px;}
+
+.numQD{width:60px;}
+
+.fsDir{float:right;
+       width:220px;
+       margin:0px 0px 6px 0px;}
+
+.fsEsq{float:left;
+       margin:0px 0px 6px 0px;}
+
+.meiaLinEsq{width:220px;
+            float:left;
+            margin-top:6px;
+            margin-bottom:18px;}
+
+.meiaLinDir{float:right;
+            width:220px;
+            margin-bottom:6px;}
+
+.impNCC{width:130px;}
+
+.botôes{text-align:left;
+        margin:12px 10px 12px 10px;}
+		
+		
+		/*FiM da AD*/
+
+
+
+	

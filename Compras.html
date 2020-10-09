@@ -1,0 +1,209 @@
+<html>
+ <head>
+  <meta charset="utf-8">
+   <title>Otaku On Titan</title>
+	<link rel="stylesheet" type="text/css" href="Otaku4.css"/>
+</head>
+       <body>
+            <header>	
+				 <!--top-->  
+                     <img class= "imgLogo" src="../Arquivos auxiliares/Auxiliares_AD1_WEB_2020_1 (1)/Imagens/OtakuOnTitan_topo.png"/>  
+			</header>	  
+		         <nav>
+				 	<div class="menu">			
+                  <div class="botão">
+                   <a href="OtakuOnTitan.html"; target= "blank">inicial</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    <a href="Destaques.html"; target= "blank">destaques</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				      <a href="catalogo.html"; target= "blank">catalogo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				       <a href="Compras.html"; target="_blank">compras</a>
+					  </div>
+					 </div>
+					 </nav>
+			
+				 <!--mid-->
+				     
+		     <!--Script-->
+                        <script>
+/***********Calcula o cpf*************/
+function calculacpf(num) {
+ var resto = 0, soma = 0;
+ for ( i = 2; i < 11; i++ )
+ {
+ soma = soma + ((num % 10) * i);
+ num = parseInt(num / 10);
+ }
+ resto = (soma % 11);
+ return (resto > 1) ? (11 - resto) : 0;
+}
+/***********verifica o cpf*************/
+function verificadordeCPF( campo ) {
+ var i, c;
+ var iniCPF;
+ var strCPF = campo.value;
+ if ( strCPF.length != 11 ) {
+ alert("CPF tem de ter 11 dígitos!");
+ return false;
+ }
+ for ( i = 0; i < 11; i++ ) {
+ c = strCPF.charAt(i);
+ if ( (c < '0') || (c > '9')) {
+ alert("CPF só pode ter dígitos, caracter " + c +
+ " inválido!");
+ return false;
+ }
+ }
+ iniCPF = strCPF.substring(0, 9);
+ pd = calculacpf(iniCPF);
+ sd = calculacpf(iniCPF * 10 + pd);
+ if ( (pd != strCPF.charAt(9)) ||
+ (sd != strCPF.charAt(10)) ) {
+ alert("Dígitos verificadores inválidos!");
+ return false;
+ }
+ return true;
+}
+                  </script>
+				       <section>
+                       <form>
+					   <div class="centralizando">
+					   <h3>Compras</h3>
+                        <fieldset class=fsDados>
+                         <legend>Dados Pessoais</legend>
+						<div class="divLinha">
+	<label class="colPri" for="dados1">Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+		<input type="text" name="NomeCompleto" required id="dados1" class="inpGrande"/>
+			 </div>
+			<div class="divLinha">
+				<label class="colPri" for="dados2">Endereço:&nbsp;&nbsp;</label>
+				  <textarea name="Endereço" rows="3" required class="inpGrande" id="dados2"></textarea>
+					</div>
+				   <div class="divLinha">
+                      <label  for="dados3">CPF:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                       <input type="text" class="impMedio"
+                         name="CPF" required ;id="dados3" maxlength="11" onChange="verificadordeCPF(this)";/>
+						   <fieldset class="fsDir"><legend>Nacimento:</legend>
+                              <center>
+						       <input type="number" required name="DiaNasc" min="1" max="31" class="numDD" required /> / 
+                                <input type="number" required name="MesNasc" min="1" max="12" class="numDD" required /> /
+                                 <input type="number" required name="AnoNasc"  min="2001" max="2020" class="numQD" required />
+                            </center>
+				       </fieldset>
+				      </div>
+				<div class="divLinha">
+			      <label class="colPri" for="dados5">Telefone:&nbsp;&nbsp;&nbsp;</label>
+                     <input type="text" class="impTelef" name="Telefone" id="dados5"/>
+					  <fieldset class="fsDir" for="dados5"><legend>Genero:</legend>
+                        <center>
+						 <label><input type="radio" name="Genero" value="M" />Mas</label>
+                           <label><input type="radio"  name="Genero"value="F" />Fem</label>
+						     <label><input type="radio" name="Genero"value="O" />Outro</label>
+                          </center>
+						 </fieldset>
+					   </div>
+						 <div class="divLinha">
+						  <label class="colPri" for="dados6">Celular:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="impTelef" name="Celular" required  id="dados6"/>
+						 </div> 
+				  </fieldset>
+					 <script>
+
+var tabProdutos = [[0, "Death Note-DVD-Completo", 85],[0, "Temporada 1 Box 1", 60],[0, "Temporada 1 Box 2", 60],
+ [1, "Naruto Gold-55 Vol", 319],[1, "Attack on Titan-Vol 1-4", 130],[1, "Attack on Titan-Vol 5-8", 130],[1, "Naruto Box P01 Vol 1-27", 600],
+ [2, "Naruto Shippuden-PVC", 210],[2, "Ryuk-Death Note-PVC", 250]   ];
+function Compra(f) {
+ var total = (f.TxtTotal.value > 0) ?
+ parseFloat(f.TxtTotal.value) : 0;
+ var nl = f.selProduto.selectedIndex - 1;
+ var tp = tabProdutos[nl][0];
+ f.listaPedidos.value += " "
+ + tabProdutos[nl][1] + "\n";
+ f.TxtTotal.value = total + tabProdutos[nl][2];
+}
+</script>
+<script>
+
+ for (p = 0; p < tabProdutos.length; p++) {
+ if (tabProdutos[p][0] == t) {
+ with (document) {
+ write("<option>");
+ write(tabProdutos[p][1]);
+ write(tabProdutos[p][2]);
+ write("</option>\"); }}}
+ document.write("</optgroup>");}
+
+</script>
+
+
+
+					<fieldset class="fsDados">
+					   <legend> Seleção de Produtos e Pagamento</legend>
+						 <div class="divLinha">
+						  Produtos:
+						   <div class="divLinha">
+						     <Select name="seleçãoProdutos" id="selProduto"> 
+                               <option> ----- </option>
+                                 <optgroup label="Anime">
+                                   <option>Death Note-DVD-Completo</option>
+                                    <option>Naruto Shippuden T01 Box 01</option>
+						              <option>Naruto Shippuden T01 Box 02</option>
+						          </optgroup>
+                                   <optgroup label="Mangá">
+                                     <option>Naruto Gold-55 Vol.</option>
+                                       <option>Attack on Titan-Vol 1-4</option>
+						                 <option>Attack on Titan-Vol 5-8</option>
+						                   <option>Naruto Box P01 Vol 1-27</option>
+						               </optgroup>
+                                         <optgroup label="Action Figure">
+                                           <option>Naruto Shippuden-PVC</option>
+                                            <option>Ryuk-Death Note-PVC</option>
+                                        </optgroup>
+                                      </select>
+						                <input type="button" value="Comprar" onClick="Compra(this.form);" />
+						               </div>
+	                                     <div class="meiaLinDir">						
+						                   <textarea class="elemDir" name="listaPedidos" readonly cols="30" rows="10" >
+                                      </textarea>
+						             <br>
+						         &nbsp;<label class="elemDir" for="TxtTotal"><br/>Valor: R$
+						                 <input type="text" name="TxtTotal" readonly id="TxtTotal" class="impMedio" /></label>
+						               </div>
+			               			     <div class="meiaLinEsq">
+						                  <fieldset class="fsEsq"><legend> Dados do Cartão&nbsp;</legend> 
+                                            <fieldset class="fsEsq">
+                                              <legend> Bandeira:</legend>
+                                                <label><input type="radio"  name="CardBandeira"  />Visa</label> 
+                                                  <label><input type="radio" name="CardBandeira" />Master</label>
+                                                      <label><input type="radio" name="CardBandeira" />Amex</label>
+                                                </fieldset>						
+						                          <div class="meiaLinEsq">
+						                            <br>
+                                                     <label class="colPri" for="Validade">Validade:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                                       <input type="number" required name="TxtMesVal" id="Validade" min="1" max="12" class="numDD" value="1" /> /
+                                                        <input type="number" required name="TxtAnoVal" value="2020"min="2020" max="2026" class="numQD" />                        
+                                                      </div>
+                                                       <label class="colPri" for="Cardnumb">Número:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                                         <input class=impNCC" required  type=text name="Cardnum" size="12" id="Cardnumb" maxlength="16"/>
+                                                      </div>
+                                                </fieldset>	
+	                                             <div class="botoes">
+                                                  <br>
+                                 &nbsp;&nbsp;&nbsp;<input type="submit" value="Enviar" />
+                                                     <input type="reset" value="Limpar" />
+                                                    </div>
+                                                  </fieldset>
+                                                 </div>	
+	                                            </form>
+	                                           </div>
+	                                      </section>
+				                         <br>
+				                        <br>
+                                      <br>				    
+					                 <!--Finaly-->
+					                    <footer>
+					                      <address class="ender">
+						                    Avenida Akihabara,123/Tel:(21)91234-5678/<a href="mailto:contato@manganime.com.br">contato@manganime.com.br</a>
+						                     </address></a>
+						                 </address>
+		                            </footer>
+	  </body>
+ </html>

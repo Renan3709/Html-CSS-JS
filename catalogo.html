@@ -1,0 +1,109 @@
+
+<html>
+ <head>
+  <meta charset="utf-8">
+   <title>Otaku On Titan</title>
+	<link rel="stylesheet" type="text/css" href="Otaku4.css"/>
+</head>
+    
+       <body>
+	     
+                <header>	
+				 <!--top-->  
+                     <img class= "imgLogo" src="../Arquivos auxiliares/Auxiliares_AD1_WEB_2020_1 (1)/Imagens/OtakuOnTitan_topo.png"/>  
+			</header>	  
+		         <nav>
+				 	<div class="menu">			
+                  <div class="botão">
+                   <a href="OtakuOnTitan.html"; target= "blank">inicial</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    <a href="Destaques.html"; target= "blank">destaques</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				      <a href="catalogo.html"; target= "blank">catalogo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				       <a href="Compras.html"; target="_blank">compras</a>
+					  </div>
+					 </div>
+					 </nav>
+			
+				 <!--mid-->
+			
+                     <script>
+
+var produtos = ["NarShipB1T01A300", "NarShipB2T01A300", "AOT1-4A300", "AOT5-8A300", "NarutoBoxPart1A300", "RyukFigA300"];
+
+var Precos = [60, 60, 130, 130, 600, 250];;
+
+function Mostra(ind) {
+ var foto = document.getElementById("imgprod");
+ var prec = document.getElementById("preco");
+ 
+ foto.src = "../Arquivos auxiliares/Auxiliares_AD2_WEB_2020_1/Imagens/" + produtos[ind] + ".jpg";
+ 
+ prec.innerHTML = "R$ " + Precos[ind] + ",00";
+}
+                   </script>
+
+		     <div class="centralizando">
+				       <section>
+						   <h3>Catálogo</h3>						  
+						  <table class="tabInfo" align="center">
+                            <tr> 
+                             <th  class="linTH" colspan="5">Itens mais procurados</th>
+                          </tr>
+                           <tr class="linTH">
+                            <th>Categoria</th>
+                             <th>Produto</th>
+                              <th>Descrição</th>
+                               <th>Foto/preço</th>
+                        
+                               </tr>
+                                  <tr>
+                                   <th class="colTH" rowspan="2">Anime</th>
+                                    <td rowspan="2"><center>Naruto Shippuden</center></td>
+                                     <td><a target="_self" href="javascript:Mostra(0);">Temporada 1 Box 1</a></td>
+                                      <td rowspan="5"><center><figure><img class="estilo" id="imgprod" src="../Arquivos auxiliares/Auxiliares_AD2_WEB_2020_1/Imagens/vazio.jpg"</figure></center></td>
+                                       
+                                        </tr> 
+                                          <tr>
+                                           <td><a target="_self" href="javascript:Mostra(1);">Temporada 1 Box 2</a></td>
+                                           
+                                           </tr>
+                                              <tr>
+                                               <th class="colTH" rowspan="3">Mangá</th>
+                                                 <td rowspan="2"><center>Attack on Titan</center></td>
+                                                   <td><a target="_self" href="javascript:Mostra(2);">Volumes 1-4</a></td>
+                                                   
+                                                       </tr> 
+                                                          <tr>
+                                                            <td><a target="_self" href="javascript:Mostra(3);">Volumes 5-8</a></td>
+                                                             
+                                                                </tr>
+                                                                  <tr>
+                                                                    <td><center>Naruto<center></td>
+                                                                      <td><a target="_self" href="javascript:Mostra(4);">Box Parte 1 - Vol 1-27 - Inglês</a></td>
+                                                                       
+                                                                          
+                                                                          </tr>
+                                                                             <tr>
+                                                                               <th class="colTH" rowspan="2">Colecionáveis</th>
+                                                                                 <td><center>Death Note</center></td>
+                                                                                   <td><a target="_self" href="javascript:Mostra(5);">Ryouk em PVC</a></td>
+                                                                                  <td class=preco align="center" id="preco"></td>
+                                                                                      
+                                                                                      </tr> 
+                                            						             </table>
+				                                                              
+				                                                         </section>
+</div>				                                                       
+																	   <br>
+				                                                       <br>
+                                                                      <br>				    
+					<!--Finaly-->
+					  <footer>
+					      <address class="ender">
+						  Avenida Akihabara,123/Tel:(21)91234-5678/<a href="mailto:contato@manganime.com.br">contato@manganime.com.br</a>
+						 </address></a>
+						 </address>
+			         
+			     
+		   </footer>
+	  </body>
+ </html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+   <title>Otaku On Titan</title>
+	<link rel="stylesheet" type="text/css" href="Otaku4.css"/>
+</head>
+    
+<!--top-->    
+   <body>
+	     
+                <header>	
+				  
+                     <img class= "imgLogo" src="../Arquivos auxiliares/Auxiliares_AD1_WEB_2020_1 (1)/Imagens/OtakuOnTitan_topo.png"/>  
+			</header>	  
+		         <nav class="menu">			 				
+                  <div class="botão">
+                   <a href="OtakuOnTitan.html"; target= "blank">inicial</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				    <a href="Destaques.html"; target= "blank">destaques</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				      <a href="catalogo.html"; target= "blank">catalogo</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				       <a href=""; base target= "blank">compras</a>
+					  </div>
+					 </nav>
+			
+				 <!--mid-->
+				     
+   
+		  <script>
+
+var anime = new Array(3);
+var manga = new Array(3);
+anime[0] = ["Death Note", 300, 540,"DeathNoteA110" ];
+anime[1] = ["Naruto Gold", 300, 540,"NarutoGoldA110" ];
+anime[2] = ["Naruto Shippuden", 300, 540,"NarutoFigA110"];
+manga[0] = [ ["Série completa"], ["Formato DVD-5 discos"],["Preço:de <span class='precovelho'> R$90,00</span>"],["por R$85,00"] ];
+manga[1] = [ ["Mangá em Português"], ["55 volumes"],["Preço de<span class='precovelho'> R$1100,00</span>"],["por  R$1000,00"]  ];
+manga[2] = [ ["Action figure em PVC"], ["Preço de<span class='precovelho'> R$250,00</span>"],
+ ["por R$210,00"] ];
+
+
+function otakuontitan(tipo)
+{
+ var jan = open("", anime[tipo][0],
+ "location=no,status=no,width=" +
+ anime[tipo][1] + ",height=" +
+ anime[tipo][2] + "");
+ with (jan.document) {
+ write("<html><head><title>Expresso do Cafe</title>");
+ write("<link rel='stylesheet' type='text/css'");
+ write(" href='Otaku4.css'>");
+ write("</head><body>");
+ write("<div class='apres'>");
+ write("<h2>", anime[tipo][0], "</h2>");
+ write("<img src='../Arquivos auxiliares/Auxiliares_AD2_WEB_2020_1/Imagens/", anime[tipo][3],
+ ".jpg' />");
+ write("</div><ul>");
+ for (i = 0; i < manga[tipo].length; i++)
+ write("<div class='centralizando2'>", manga[tipo][i][0],
+ "</div>","<br>");
+ write("</ul>");
+ write("<div class='apres'>");
+ write("<input type='button' value='Fechar' ");
+ write("onClick='window.close();'/></div>");
+ write("</form></div></body></html>");
+ close();
+ }
+}
+</script>
+		  <section>
+				<div class= "centralizando">
+					  <H3>Destaques/Promoções</H3>
+				        <ol class="listDestaq">		  
+						  <li><a target="_self" href="javascript:otakuontitan(0);">Death Note</span></li>
+							<li><a target="_self" href="javascript:otakuontitan(1);">Naruto Gold</span></li>		      
+							   <li><a target="_self" href="javascript:otakuontitan(2);">Naruto Shippuden</a></li>
+								</ol>
+								</div>  
+								</section>
+				  <br>
+				   <br>
+                     <br>				    
+					<!--Finaly-->
+					  <footer>
+					      <address class="ender">
+						  Avenida Akihabara,123/Tel:(21)91234-5678/<a href="mailto:contato@manganime.com.br">contato@manganime.com.br"</a>
+						 </address>
+			         
+			     
+		   </footer>
+	  </body>
+ </html>
